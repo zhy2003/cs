@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构造函数</title>
+</head>
+<body>
+    <script>
+        // // 创建数组
+        // var arr1 = []
+        // var arr2 = new Array() 
+
+        // console.log(arr1)
+        // console.log(arr2)
+
+        // var obj1 = {}
+        // var obj2 = new Object()
+        // console.log(obj1)
+        // console.log(obj2)
+
+        // var a = "hello world"
+
+        // // 定义函数
+        // function change(str)
+        // {
+        //     str = "..." +str+ "..."
+        // }
+        // console.log(a)
+        // change(a)
+        // console.log(a)
+
+        // var obj = {
+        //     name:"gumou"
+        // }
+        // function change(o)
+        // {
+        //     o.xxx = "hello world"
+        // }
+        // console.log(obj)
+        // change(obj)
+        // console.log(obj)
+
+        // function change(arr)
+        // {
+        //     arr.pop()
+        // }
+
+        // var arr = [11,22,33,44,55]
+        // console.log(arr)
+        // change(arr)
+        // console.log(arr)
+
+        // var a = 100
+        // var b = a   //b=100
+        // b++
+        // console.log(a);
+
+        // var obj1 = {
+        //     name:"suiyi"
+        // }
+        // var obj2 = obj1
+        // obj2.age = 11
+
+        // console.log("obj1",obj1)
+        // console.log("obj2",obj2)
+
+        // var obj1 = {
+        //     name:"顾某壮"
+        // }
+
+        // var obj2 = obj1
+        // var obj3 = obj1
+
+        // obj2.age = 11
+        // obj3.sex = "Male"
+
+        // console.log("obj1",obj1)
+        // console.log("obj2",obj2)
+        // console.log("obj2",obj3)
+
+        // function add(num1,num2){
+        //     return num1+num2
+        // }
+
+        // function test(fun,a,b)
+        // {
+        //     return fun(a,b)
+        // }
+
+        // var res = test(add,22,33)
+        // console.log(res)
+
+        // var a = 123
+        
+        // function add(){
+        //     return "Hello World"
+        // }
+
+        // function test(){
+        //     return add
+        // }
+
+        // var res = test() //?
+        // console.log(res())
+
+        // var bbb = "Hello World"
+
+        // function test(){
+        //     function f1()
+        //     {
+        //         console.log((bbb))
+        //     }
+        //     return f1
+        // }
+        // test()
+
+        function f1(){
+            var a ="hello"
+
+            function f2(){
+                return a
+            }
+
+            return f2
+        }
+
+        var res = f1()()
+        console.log(res)
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var arr1 = [11,22,33,44]
+        // console.log(arr1)
+        // // 通过下表访问数组元素
+        // console.log(arr1[0]) //11
+        // console.log(arr1[3]) //44
+
+        // console.log(arr1.length)
+        // console.log(arr1.length-2)// 减去数组长度
+        
+        //  arr1.forEach(function(v,k){
+        //      console.log(k,v)
+        //  }) 
+
+        arr1.push('sss')
+        console.log(arr1)
+        // 尾部添加
+        arr1.pop()
+        console.log(arr1)
+        // 尾部弹出一个元素
+
+        arr1.unshift(88)
+        arr1.unshift(99)
+        console.log(arr1)
+        // 头部增加一个元素
+        arr1.shift()
+        console.log(arr1)
+        // 头部弹出
+
+        console.log(arr1.reverse())
+        // reverse倒序
+
+        // slice 数组复制
+        var res = arr1.slice(1,3)
+        console.log(res)
+        // 通过下标获取
+    </script>
+</body>
+</html>

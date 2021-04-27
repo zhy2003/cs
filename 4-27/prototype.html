@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原型 prototype</title>
+</head>
+<body>
+    <script>
+
+        var obj ={}
+        obj.name = "suiyi"
+        obj.age = 11
+        obj.sex = "aa"
+
+        console.log(obj)
+
+        // 定义一个构造函数
+        function Person()
+        {
+           
+        }
+
+        Person.prototype.name ="noname"
+        Person.prototype.age ="0"
+        Person.prototype.sex ="随意"
+
+        var p1 = new Person()
+        console.log(p1)
+        console.log(p1.name)
+        console.log(p1.age)
+        console.log(p1.sex)
+
+        var p2 = new Person()
+        console.log(p2)
+        console.log(p2.name)
+        console.log(p2.age)
+        console.log(p2.sex)
+
+        var p3 = new Person("suiyi",11,"aa")
+        console.log(p3)
+
+    </script>
+</body>
+</html>
