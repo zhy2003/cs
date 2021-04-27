@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="name" id="username">
+    </div>
+    <script>
+        var arr = document.getElementById('username')
+        arr.onblur = function(){
+            css = document.getElementById('username').value
+            ajax({
+                url:'1.php',
+                type:'get',
+                data:{username:username},
+                success(){
+
+                }
+            })
+        }
+  
+
+
+        function ajax(opts){
+        var url = opts.url
+        var type = opts.type || 'GET'
+        var dateType = opts.dataType || 'json'
+        var onsuccess = opts.onsuccess || function(){}
+        var onerror = opts.onerror || function(){}
+        var data = opts.data || {}
+
+        var dataStr = []
+        for(var key in data) {
+            dataStr.push(key + '=' + data[key])
+        }
+
+        dataStr = dataStr.join('&')
+
+        if(type === 'GET') {
+            url += '?' + dataStr
+        }
+
+        var xhr = new XMLHttpRequest()
+        xhr.open(type, url, true)
+        xhr.onload = function(){
+            if(xhr.readystatus === 4&& xhr.status === 200){
+                if(dataType === 'json'){
+                    onsuccess(JSON.parse(xhr.responseText))
+                }else{
+                    onsuccess(xhr.responseText)
+                }
+            }else{
+                onerror()
+            }
+        }
+        xhr.onerror = onerror
+        if(type === 'POST'){
+            xhr.send(dataStr)
+        }else{
+            xhr.send()
+        }
+    }
+    ajax({
+        url: 'http://api.jirengu.com/weather.php',
+        data: {
+            city: '北京'
+        },
+        onsuccess: function(ret){
+            console.log(ret)
+        },
+        onerror: function(){
+        
+        }
+    })
+
+    </script>
+</body>
+</html>
