@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const info_a = {
+            [Symbol("name")]:"ljz",
+            [Symbol("agee")]:17,
+            [Symbol("sex")]:"未知",
+            [Symbol("address")]:"河北"
+        }
+        const info_b = {
+            [Symbol("name")]:"tiantian",
+            [Symbol("age")]:18,
+            [Symbol("sex")]:"N",
+            [Symbol("address")]:"cgb"
+        }
+
+        
+        const info_c = {
+            [Symbol("name")]:"zhuzhu",
+            [Symbol("age")]:"19",
+            [Symbol("sex")]:"N",
+            [Symbol("address")]:"dwy"
+        }
+
+        let info = Object.assign(info_a,info_b,info_c)
+        console.log(info)
+    </script>
+</body>
+</html>
