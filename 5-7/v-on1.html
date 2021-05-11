@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:=click="hello">AAA</button>
+        <button @click="hello">BBB</button>
+    </div>
+
+    <script src="vue.2.6.12.min.js"></script>
+    <script>
+        // 实例化Vue
+        new Vue({
+            el:"#app",
+            data:{},
+            methods:{
+                hello(){
+                    alert(1111)
+                },
+                hello2(){
+                    alert(2222)
+
+                }
+            },
+        })
+    </script>
+</body>
+</html>
